@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apractice.MakeMyTripTask1">
+      <class name="StringPrograms.RemoveDuplicateWordsInAString">
         <methods>
-          <include name="test1"/>
+          <include name="countOccuranceOfWord"/>
         </methods>
-      </class> <!-- apractice.MakeMyTripTask1 -->
+      </class> <!-- StringPrograms.RemoveDuplicateWordsInAString -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

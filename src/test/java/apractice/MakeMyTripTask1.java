@@ -42,6 +42,8 @@ public class MakeMyTripTask1 {
 		
 		a.click();
 		
+//		driver.close();
+		
 		
 	}
 	

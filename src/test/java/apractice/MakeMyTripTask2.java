@@ -15,7 +15,7 @@ import org.testng.annotations.Test;
 public class MakeMyTripTask2 {
 	
 	@Test
-	public void test2() {
+	public void test2() throws InterruptedException {
 		ChromeOptions options = new ChromeOptions();
 		options.addArguments("--disable-notifications");
 		WebDriver driver = new ChromeDriver(options);
@@ -36,6 +36,30 @@ public class MakeMyTripTask2 {
 		
 		WebElement to = driver.findElement(By.xpath("//div[@class='calc60']/p[contains(text(),'Bhubaneswar')]"));
 		wait.until(ExpectedConditions.elementToBeClickable(to)).click();
+		
+		driver.findElement(By.xpath("//div[contains(text(),'July')]/../following-sibling::div/div/descendant::p[text()=20]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[text()='Return']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[contains(text(),'August')]/../following-sibling::div/div/descendant::p[text()=15]")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[@data-cy='flightTraveller']")).click();
+		
+		driver.findElement(By.xpath("//div[contains(@class,'travellers')]/descendant::p[text()=\"ADULTS (12y +)\"]/following-sibling::ul/li[@data-cy='adults-2']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[contains(@class,'travellers')]/descendant::p[text()=\"CHILDREN (2y - 12y )\"]/following-sibling::ul/li[@data-cy='children-1']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//div[contains(@class,'travellers')]/descendant::p[text()=\"INFANTS (below 2y)\"]/following-sibling::ul/li[@data-cy='infants-1']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//button[text()='APPLY']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//a[text()='Search']")).click();
+		
+		a.click();
+		Thread.sleep(2000);
+		driver.close();
+		
+		
 		
 	}
 

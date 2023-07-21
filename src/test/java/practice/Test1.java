@@ -1,15 +1,27 @@
 package practice;
 
-import org.testng.Reporter;
+import java.util.HashMap;
+import java.util.LinkedHashMap;
+import java.util.TreeMap;
+
 import org.testng.annotations.Test;
 
 public class Test1 {
-	@Test
-	public void test() {
+	
+	public static void main(String[] args) {
 		
-		System.out.println("hiii");
-		System.out.println("hello");
-		Reporter.log("Hii Good Morning");
+		LinkedHashMap<String,Object> map = new LinkedHashMap<>();
+//		map.put("s", null);
+//		map.put('s', null);
+		System.out.println(map);
+	}
+	
+	@Test
+	public void treeMap() {
+		TreeMap<String, Integer> map = new TreeMap<>();
+		map.put("b", 15);
+		map.put("a", 10);
+		System.out.println(map);
 	}
 	
 }

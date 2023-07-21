@@ -37,10 +37,7 @@ public class BrokenLinks {
 				if(statusCode>=400) {
 					brokenList.add(allLinks+"------>"+ statusCode);
 				}
-			} catch (IOException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
+			} catch (IOException e) {}
 			System.out.println(brokenList);
 			driver.quit();
 			
