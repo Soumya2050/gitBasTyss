@@ -45,7 +45,7 @@ public class ReverseAString {
 		}
 		for(int i=count-1;i>=0;i--)
 		{
-			System.out.print(ch[i]);
+			System.out.print(ch[i]+" ");
 		}
 	}
 	@Test

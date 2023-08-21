@@ -37,11 +37,11 @@ public class MakeMyTripTask2 {
 		WebElement to = driver.findElement(By.xpath("//div[@class='calc60']/p[contains(text(),'Bhubaneswar')]"));
 		wait.until(ExpectedConditions.elementToBeClickable(to)).click();
 		
-		driver.findElement(By.xpath("//div[contains(text(),'July')]/../following-sibling::div/div/descendant::p[text()=20]")).click();
+		driver.findElement(By.xpath("//div[contains(text(),'August')]/../following-sibling::div/div/descendant::p[text()=22]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//span[text()='Return']")).click();
 		Thread.sleep(2000);
-		driver.findElement(By.xpath("//div[contains(text(),'August')]/../following-sibling::div/div/descendant::p[text()=15]")).click();
+		driver.findElement(By.xpath("//div[contains(text(),'August')]/../following-sibling::div/div/descendant::p[text()=25]")).click();
 		Thread.sleep(2000);
 		driver.findElement(By.xpath("//div[@data-cy='flightTraveller']")).click();
 		

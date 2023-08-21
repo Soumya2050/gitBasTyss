@@ -22,7 +22,7 @@ public class BrokenLinks {
 		driver.get("http://rmgtestingserver/domain/House_Rental_Application/");
 		List<WebElement> links = driver.findElements(By.xpath("//a"));
 		ArrayList<Object> brokenList = new ArrayList<Object>();
-		
+		System.err.println("hiii");
 		for(int i=0;i<links.size();i++)
 		{
 			String allLinks = links.get(i).getAttribute("href");

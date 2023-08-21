@@ -1,15 +1,20 @@
 package arrayPrograms;
 
+import java.util.ArrayList;
+import java.util.TreeSet;
+
 import org.testng.annotations.Test;
+
 /**
  * ArrayPrograms
+ * 
  * @author srjen
  *
  */
 public class ArrayPrograms {
-/**
- * toSortAnArrayInAscendringOrderUsingBBsort
- */
+	/**
+	 * toSortAnArrayInAscendringOrderUsingBBsort
+	 */
 	@Test(priority = 1)
 	public void toSortAnArrayInAscendringOrderUsingBBsort() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -29,11 +34,11 @@ public class ArrayPrograms {
 		for (int i = 0; i < a.length; i++) {
 			System.err.println(a[i]);
 		}
-		System.out.println();
 	}
-/**
- * toSortAnArrayInDescendringOrderUsingBBsort
- */
+
+	/**
+	 * toSortAnArrayInDescendringOrderUsingBBsort
+	 */
 	@Test(priority = 2)
 	public void toSortAnArrayInDescendringOrderUsingBBsort() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -55,9 +60,10 @@ public class ArrayPrograms {
 		}
 		System.out.println();
 	}
-/**
- * sumOf1St3MaxNumberIs
- */
+
+	/**
+	 * sumOf1St3MaxNumberIs
+	 */
 	@Test(priority = 3)
 	public void sumOf1St3MaxNumberIs() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -78,9 +84,10 @@ public class ArrayPrograms {
 		System.err.println("The sum of 3 max number is " + sum);
 		System.out.println();
 	}
-/**
- * sumOf3MinNumberInAnArray
- */
+
+	/**
+	 * sumOf3MinNumberInAnArray
+	 */
 	@Test(priority = 4)
 	public void sumOf3MinNumberInAnArray() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -102,9 +109,10 @@ public class ArrayPrograms {
 		System.err.println("The sum of 3  min number is " + sum);
 		System.out.println();
 	}
-/**
- * MulOf3MinNumberInAnArray
- */
+
+	/**
+	 * MulOf3MinNumberInAnArray
+	 */
 	@Test(priority = 5)
 	public void MulOf3MinNumberInAnArray() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -126,9 +134,10 @@ public class ArrayPrograms {
 		System.err.println("The mul of 3  max number is " + mul);
 		System.out.println();
 	}
-/**
- * MulOf3MaxNumberInAnArray
- */
+
+	/**
+	 * MulOf3MaxNumberInAnArray
+	 */
 	@Test(priority = 6)
 	public void MulOf3MaxNumberInAnArray() {
 		int[] a = { 5, 10, 45, 32, 65, 75 };
@@ -142,50 +151,53 @@ public class ArrayPrograms {
 				}
 			}
 		}
-		int mul = 0;
+		int mul = 1;
 		for (int i = 0; i < 3; i++) {
 			System.err.println(a[i]);
-			mul += a[i];
+			mul=mul* a[i];
 		}
 		System.err.println("The mul of 3  min number is " + mul);
 		System.out.println();
 	}
-/**
- * print1StMaxNumberInAnArryWithoutBBsort
- */
+
+	/**
+	 * print1StMaxNumberInAnArryWithoutBBsort
+	 */
 	@Test(priority = 7)
 	public void print1StMaxNumberInAnArryWithoutBBsort() {
 		int[] a = { 5, 10, 145, 32, 65, 75 };
-		int asc = a[0];
+		int fMax = a[0];
 		for (int i = 0; i < a.length; i++) {
-			if (asc < a[i]) {
-				asc = a[i];
+			if (fMax < a[i]) {
+				fMax = a[i];
 			}
 		}
-		System.err.println(asc);
+		System.err.println(fMax);
 		System.out.println();
 	}
-/**
- * print1StminNumberInAnArryWithoutBBsort
- */
+
+	/**
+	 * print1StminNumberInAnArryWithoutBBsort
+	 */
 	@Test(priority = 8)
 	public void print1StminNumberInAnArryWithoutBBsort() {
 		int[] a = { 5, 10, 145, 32, 65, 75 };
-		int desc = a[0];
+		int fMin = a[0];
 		for (int i = 0; i < a.length; i++) {
-			if (desc > a[i]) {
-				desc = a[i];
+			if (fMin > a[i]) {
+				fMin = a[i];
 			}
 		}
-		System.err.println(desc);
+		System.err.println(fMin);
 		System.out.println();
 	}
-/**
- * FirstAnd2NdMinNumberInAnArry
- */
+
+	/**
+	 * FirstAnd2NdMinNumberInAnArry
+	 */
 	@Test(priority = 9)
 	public void FirstAnd2NdMinNumberInAnArry() {
-		int a[] = { 5, 2, 1, 3, 0, 4 };
+		int a[] = { 25, 20, 15, 26 };
 		int fMin = a[0];
 		int sMin = a[1];
 		for (int i = 0; i < a.length; i++) {
@@ -199,9 +211,10 @@ public class ArrayPrograms {
 		System.err.println(fMin + "   " + sMin);
 		System.out.println();
 	}
-/**
- * FirstAnd2NdMaxNumberInAnArry
- */
+
+	/**
+	 * FirstAnd2NdMaxNumberInAnArry
+	 */
 	@Test(priority = 10)
 	public void FirstAnd2NdMaxNumberInAnArry() {
 		int a[] = { 5, 2, 1, 3, 0, 4 };// 521304
@@ -220,9 +233,9 @@ public class ArrayPrograms {
 		System.err.println(fMax + "   " + sMax);
 		System.out.println();
 	}
+
 	/**
-	 * append0SAtLast
-	 * output = 4 6 1 0 0 0
+	 * append0SAtLast output = 4 6 1 0 0 0
 	 */
 	@Test(priority = 11)
 	public void append0SAtLast() {
@@ -246,8 +259,8 @@ public class ArrayPrograms {
 	}
 
 	/**
-	 * printlnCombinationOfTwoNumber
-	 * input = { 9, 7, 8, 5, 2, 4, 3, 6 } errput=9 2,7 4,8 3,5 6
+	 * printlnCombinationOfTwoNumber input = { 9, 7, 8, 5, 2, 4, 3, 6 } errput=9 2,7
+	 * 4,8 3,5 6
 	 */
 	@Test(priority = 12)
 	public void printlnCombinationOfTwoNumber() {
@@ -255,7 +268,7 @@ public class ArrayPrograms {
 
 		for (int i = 0; i < a.length; i++) {
 			for (int j = i + 1; j < a.length; j++) {
-				if ((a[i] + a[j]) == 11) {
+				if ((a[i] + a[j]) == 13) {
 					System.err.println(a[i] + " " + a[j]);
 				}
 			}
@@ -292,9 +305,27 @@ public class ArrayPrograms {
 	@Test(priority = 14)
 	public void a() {
 		int result = 0;
-		for (int i = 1; i <= 6; i++) {
-			System.out.println(result);
+		for (int i = 1; i <=6; i++) {			
 			result = result * 2 + 1;
+			System.err.print(result+" ");
+		}
+	}
+
+	@Test
+	public void Sumfirst3maximumNumberUsingMap() {
+
+		int[] a = { 10, 25, 78, 34, 12, 1 };
+
+		TreeSet<Integer> map = new TreeSet<>();
+		for (int i = 0; i < a.length; i++) {
+			map.add(a[i]);
+		}
+		ArrayList<Integer> list = new ArrayList<>();
+		list.addAll(map);
+		
+		for(int i=0;i<list.size();i++)
+		{
+			Object obj = list.get(i);
 		}
 	}
 }

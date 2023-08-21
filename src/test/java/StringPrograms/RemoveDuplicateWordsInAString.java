@@ -86,7 +86,7 @@ public class RemoveDuplicateWordsInAString {
 	
 	@Test(priority = 4)
 	public void positionOfWordInAString() {
-		String s = "i am a am a software                  engineer engineer";
+		String s = "i am a am a software engineer engineer";
 		String[] str = s.split("\\s+");
 		LinkedHashSet<String> set =new LinkedHashSet<>();
 		for(int i=0;i<str.length;i++)

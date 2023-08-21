@@ -6,7 +6,7 @@ public class FindMinLengthInAString {
 
 	public static void main(String[] args) {
 
-		String[] s = { "ab", "abc", "bd", "abcd", "abcde", "cd" };
+		String[] s = { "a","ab", "abc", "bd", "abcd", "abcde", "cd" };
 
 		for (int i = 0; i < s.length; i++) {
 			if (s[i].length() <= 2) {
