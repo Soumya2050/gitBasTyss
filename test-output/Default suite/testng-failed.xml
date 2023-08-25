@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apractice.MakeMyTripTask2">
+      <class name="arrayPrograms.ArrayPrograms">
         <methods>
-          <include name="test2"/>
+          <include name="fgh"/>
         </methods>
-      </class> <!-- apractice.MakeMyTripTask2 -->
+      </class> <!-- arrayPrograms.ArrayPrograms -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

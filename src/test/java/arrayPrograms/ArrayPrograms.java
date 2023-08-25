@@ -1,6 +1,7 @@
 package arrayPrograms;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.TreeSet;
 
 import org.testng.annotations.Test;
@@ -154,7 +155,7 @@ public class ArrayPrograms {
 		int mul = 1;
 		for (int i = 0; i < 3; i++) {
 			System.err.println(a[i]);
-			mul=mul* a[i];
+			mul = mul * a[i];
 		}
 		System.err.println("The mul of 3  min number is " + mul);
 		System.out.println();
@@ -253,9 +254,31 @@ public class ArrayPrograms {
 			}
 		}
 		for (int i = 0; i < b.length; i++) {
-			System.err.println(b[i]);
+			System.err.print(b[i]);
 		}
 		System.out.println();
+	}
+
+	@Test
+	public int appendZeroInMiddle() {
+		int a[] = { 1, 0, 5, 6, 0, 2, 0, 0 };
+		int b[] = new int[a.length];
+
+		int m = 0, n = 1;
+
+		for (int i = 0; i < a.length; i++) {
+			if (a[i] != 0) {
+				b[m] = a[i];
+				m += 2;
+			} else {
+				b[n] = a[i];
+				n += 2;
+			}
+		}
+		for (int i = 0; i < b.length; i++) {
+			System.out.print(b[i] + " ");
+		}
+		return n;
 	}
 
 	/**
@@ -305,9 +328,9 @@ public class ArrayPrograms {
 	@Test(priority = 14)
 	public void a() {
 		int result = 0;
-		for (int i = 1; i <=6; i++) {			
+		for (int i = 1; i <= 6; i++) {
 			result = result * 2 + 1;
-			System.err.print(result+" ");
+			System.err.print(result + " ");
 		}
 	}
 
@@ -322,10 +345,69 @@ public class ArrayPrograms {
 		}
 		ArrayList<Integer> list = new ArrayList<>();
 		list.addAll(map);
-		
-		for(int i=0;i<list.size();i++)
-		{
+
+		for (int i = 0; i < list.size(); i++) {
 			Object obj = list.get(i);
 		}
+	}
+
+	@Test
+	public void abc() {
+
+		String s = "a4b3cd2";
+		for (int i = 1; i < s.length(); i++) {
+			char ch = s.charAt(i);
+			int count = 0;
+			char c = s.charAt(i - 1);
+			if (ch >= '1' && ch <= '9') {
+				System.err.println(Character.getNumericValue(ch));
+				count = Character.getNumericValue(ch);
+			} else
+				count = 1;
+
+			if (!(Character.isDigit(c))) {
+				for (int j = 1; j <= count; j++) {
+					System.out.print(c);
+				}
+			}
+		}
+
+	}
+
+	@Test
+	public void ab() {
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 1; j <= 5; j++) {
+				if (j == 1) {
+					System.out.print("a ");
+				} else if (j == 2 && i != 1) {
+					System.out.print("e ");
+				} else if (j == 3 && i != 1 && i != 2) {
+					System.out.print("i ");
+				} else if (j == 4 && i != 1 && i != 2 && i != 3) {
+					System.out.print("o ");
+				} else if (j == 5 && i != 1 && i != 2 && i != 3 && i != 4) {
+					System.out.print("u ");
+				}
+			}
+			System.out.println();
+		}
+	}
+
+	@Test
+	public void fgh() {
+		String s = "";
+		for (char c = 'a'; c <= 'z'; c++) {
+			if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+				s = s + c;
+			}
+		}
+		for (int i = 1; i <= 5; i++) {
+			for (int j = 0; j<i; j++) {
+				System.out.print(s.charAt(j) + " ");
+			}
+			System.out.println();
+		}
+
 	}
 }

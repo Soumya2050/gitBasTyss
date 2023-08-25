@@ -5,6 +5,7 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 import java.net.URLConnection;
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
 
 import org.openqa.selenium.By;
@@ -22,7 +23,6 @@ public class BrokenLinks {
 		driver.get("http://rmgtestingserver/domain/House_Rental_Application/");
 		List<WebElement> links = driver.findElements(By.xpath("//a"));
 		ArrayList<Object> brokenList = new ArrayList<Object>();
-		System.err.println("hiii");
 		for(int i=0;i<links.size();i++)
 		{
 			String allLinks = links.get(i).getAttribute("href");
@@ -41,6 +41,27 @@ public class BrokenLinks {
 			System.out.println(brokenList);
 			driver.quit();
 			
+		}
+	}
+	
+	@Test
+	public void a() {
+		if(System.out.printf("soumya")==null) {
+			
+		}
+	}
+	
+	@Test
+	public void b() {
+		int a[] = {1,2,3,5,3,2,1};
+		LinkedHashSet<Integer> set = new LinkedHashSet<>();
+		
+		for(int i=0;i<a.length;i++)
+		{
+			set.add(a[i]);
+		}
+		for (Integer integer : set) {
+			System.out.println(integer);
 		}
 	}
 

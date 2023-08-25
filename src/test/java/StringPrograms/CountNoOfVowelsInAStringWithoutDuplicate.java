@@ -19,7 +19,7 @@ public class CountNoOfVowelsInAStringWithoutDuplicate {
 			
 				if(character=='a'||character=='e'||character=='i'||character=='o'||character=='u') {
 					count++;
-					System.err.print(character);
+//					System.err.print(character);
 			}
 				if(count>1)
 					System.out.println(character+" occures "+count);
