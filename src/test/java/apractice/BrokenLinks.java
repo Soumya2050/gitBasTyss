@@ -14,13 +14,16 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.Test;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BrokenLinks {
 	
 	@Test
 	public void brokenLinks() {
+		WebDriverManager.chromedriver().setup();
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
-		driver.get("http://rmgtestingserver/domain/House_Rental_Application/");
+		driver.get("https://www.amazon.in/");
 		List<WebElement> links = driver.findElements(By.xpath("//a"));
 		ArrayList<Object> brokenList = new ArrayList<Object>();
 		for(int i=0;i<links.size();i++)
@@ -62,6 +65,13 @@ public class BrokenLinks {
 		}
 		for (Integer integer : set) {
 			System.out.println(integer);
+		}
+	}
+	
+	@Test
+	public void ab() {
+		if(System.err.printf("soumjashdfiub")==null) {
+
 		}
 	}
 

@@ -215,6 +215,15 @@ public class WebActionUtility {
 	public void swithToFrame(WebDriver driver, String id_name_attribute) {
 		driver.switchTo().frame(id_name_attribute);
 	}
+	
+	/**
+	 * This method is used to switch to frame window based on the webelemnt 
+	 * @param driver
+	 * @param element
+	 */
+	public void switchToFrame(WebDriver driver,WebElement frameElement) {
+		driver.switchTo().frame(frameElement);
+	}
 
 	/**
 	 * used to select the value from the dropDwon based on index
