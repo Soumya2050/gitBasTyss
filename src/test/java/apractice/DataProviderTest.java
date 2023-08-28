@@ -22,6 +22,9 @@ public class DataProviderTest {
 		obj[1][1]="Bangalore";
 		obj[1][2]="6500";
 		
+		
+		
+		
 		obj[2][0]="Bangalore";
 		obj[2][1]="Mummbai";
 		obj[2][2]="6500";
