@@ -31,7 +31,7 @@ public class ExcelDataProviderTest {
 		{
 			for(int j=0;j<lastCellNum;j++)
 			{
-				obj[i][j]=sh.getRow(i).getCell(j).getStringCellValue();
+				obj[i][j]=sh.getRow(i).getCell(j).toString();
 			}
 			
 		}

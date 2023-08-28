@@ -70,7 +70,7 @@ public class VerifyProjectIsCreated {
 			DriverManager.registerDriver(driver);
 			con=DriverManager.getConnection("jdbc:mysql://rmgtestingserver:3333/projects","root@%","root");
 			Statement stmt=con.createStatement();
-			String query= "insert into project values('TY_PROJ_2052','qwerty','30/06/2023','TYSS','completed','6')";
+			String query= "insert into project values('TY_PROJ_2052565','qwerty','30/06/2023','TYSS','completed','6')";
 			int result=stmt.executeUpdate(query);
 			if(result==1)
 			{

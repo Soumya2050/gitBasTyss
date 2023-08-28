@@ -9,11 +9,15 @@ import java.util.Random;
  * @author srjen
  *
  */
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.remote.RemoteWebDriver;
 public class JavaUtility {
 
 	Random random = new Random();
 	Date dateObj = new Date();
 	SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+	RemoteWebDriver driver;
 
 	/**
 	 * generate random number with in the limit of 40000 for very invocation
@@ -48,6 +52,13 @@ public class JavaUtility {
 		Date date = cal.getTime();
 		String rDate = sdf.format(date);
 		return rDate;
+	}
+	
+	public void selectSpecificDateForInput(int year,String month,int date)
+	{
+		driver.findElement(By.xpath("//div[@class='DayPicker-Caption']/div[contains(text(),'"+month+"') and  contains(text(),'"+year+"') ]"));
+		
+		
 	}
 
 }

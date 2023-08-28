@@ -11,8 +11,10 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
-public class ListenerImplementClass implements ITestListener{
+import com.aventstack.extentreports.ExtentReports;
 
+public class ListenerImplementClass implements ITestListener{
+	ExtentReports report;
 	@Override
 	public void onTestStart(ITestResult result) {
 		
