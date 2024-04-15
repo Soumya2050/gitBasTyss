@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="apractice.BrokenLinks">
+      <class name="arrayPrograms.ArrayPrograms">
         <methods>
-          <include name="brokenLinks"/>
+          <include name="ashdgf"/>
         </methods>
-      </class> <!-- apractice.BrokenLinks -->
+      </class> <!-- arrayPrograms.ArrayPrograms -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

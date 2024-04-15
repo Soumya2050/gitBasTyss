@@ -17,12 +17,12 @@ public class PrintDuplicateWithoutCount {
 		for (Character character : set) {
 			int count = 0;
 			for (int i = 0; i < s.length(); i++) {
-				if (character == s.charAt(i)) {
+				if (character.equals(s.charAt(i))) {
 					count++;
 				}
 			}
 			if (count > 1) {
-				System.out.println(character + " is present" + count + " times");
+				System.out.println(character + " is present :- " + count + " times");
 			}
 		}
 	}

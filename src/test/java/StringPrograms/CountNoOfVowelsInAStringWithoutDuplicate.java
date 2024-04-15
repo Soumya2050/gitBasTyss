@@ -6,7 +6,7 @@ public class CountNoOfVowelsInAStringWithoutDuplicate {
 	
 	public static void main(String[] args) {
 		
-		String s="India";
+		String s="aeiouaeiou";
 		String str = s.toLowerCase();
 		char[] ch = str.toCharArray();
 		LinkedHashSet<Character> set = new LinkedHashSet<>();
@@ -24,7 +24,7 @@ public class CountNoOfVowelsInAStringWithoutDuplicate {
 				if(count>1)
 					System.out.println(character+" occures "+count);
 		}
-		System.out.println(count);
+//		System.out.println(count);
 		
 		
 	}

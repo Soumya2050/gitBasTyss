@@ -13,7 +13,7 @@ public class DataProviderTest {
 	
 	@DataProvider
 	public Object[][] bookTkt(){
-		Object[][] obj = new Object[3][3];
+		String[][] obj = new String[3][3];
 		obj[0][0]="Bangalore";
 		obj[0][1]="Odisha";
 		obj[0][2]="5600";

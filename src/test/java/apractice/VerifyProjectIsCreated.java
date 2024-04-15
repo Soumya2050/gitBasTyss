@@ -8,7 +8,9 @@ import java.sql.Statement;
 
 import org.testng.annotations.Test;
 
-import com.mysql.jdbc.Driver;
+import com.mysql.cj.jdbc.Driver;
+
+
 
 public class VerifyProjectIsCreated {
 	
@@ -16,18 +18,18 @@ public class VerifyProjectIsCreated {
 	public  void verifyProjectIsCreated() throws SQLException {
 		
 		Connection conn=null;
-		String project_Name = "TYSS";
+		String empName = "Trisulam";
 		try {
 			Driver driverRef = new Driver();
 			DriverManager.registerDriver(driverRef);
-			conn= DriverManager.getConnection("jdbc:mysql://rmgtestingserver:3333/projects","root@%","root");
+			conn= DriverManager.getConnection("jdbc:mysql://localhost:3306/soumya","soumya","Soumya@2050");
 			Statement statement=conn.createStatement();
-			String query="select * from project";
+			String query="select * from emp";
 			ResultSet result=statement.executeQuery(query);
 			boolean flag=false;
 			while(result.next()) {
-				String value=result.getString(4);
-				if (value.equalsIgnoreCase(project_Name)) {
+				String value=result.getString(1);
+				if (value.equalsIgnoreCase(empName)) {
 					System.out.println("Project is created");
 					flag=true;
 					break;
@@ -50,7 +52,7 @@ public class VerifyProjectIsCreated {
 			DriverManager.registerDriver(driver);
 			con=DriverManager.getConnection("jdbc:mysql://rmgtestingserver:3333/projects","root@%","root");
 			Statement stmt=con.createStatement();
-			String query="Select * from project";
+			String query="Select * from emp";
 			ResultSet result=stmt.executeQuery(query);
 			while(result.next())
 			{
@@ -68,9 +70,9 @@ public class VerifyProjectIsCreated {
 			
 			Driver driver=new Driver();
 			DriverManager.registerDriver(driver);
-			con=DriverManager.getConnection("jdbc:mysql://rmgtestingserver:3333/projects","root@%","root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/soumya","soumya","Soumya@2050");
 			Statement stmt=con.createStatement();
-			String query= "insert into project values('TY_PROJ_2052565','qwerty','30/06/2023','TYSS','completed','6')";
+			String query= "insert into emp values('sobhan',104,45000,756325548)";
 			int result=stmt.executeUpdate(query);
 			if(result==1)
 			{
@@ -91,13 +93,13 @@ public class VerifyProjectIsCreated {
 		try {
 			Driver driver=new Driver();
 			DriverManager.registerDriver(driver);
-			con=DriverManager.getConnection("jdbc:mysql://rmgtestingserver:3333/projects","root@%","root");
+			con=DriverManager.getConnection("jdbc:mysql://localhost:3306/soumya","soumya","Soumya@2050");
 			Statement stmt=con.createStatement();
-			String query="Select * from project";
+			String query="Select * from emp ;";
 			ResultSet result=stmt.executeQuery(query);
 			while(result.next())
 			{
-				System.out.println(result.getString(1)+"\t"+result.getString(2)+"\t"+result.getString(3)+"\t"+result.getString(4)+"\t"+result.getString(5)+"\t"+result.getInt(6));
+				System.out.println(result.getString(1)+"\t"+result.getInt(2)+"\t"+result.getInt(3)+"\t"+result.getInt(4));
 			}
 		} finally {
 			con.close();

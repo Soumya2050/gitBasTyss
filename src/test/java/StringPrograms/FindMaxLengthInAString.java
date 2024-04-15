@@ -1,10 +1,12 @@
 package StringPrograms;
 
+import org.testng.annotations.Test;
+
 public class FindMaxLengthInAString {
 
 	public static void main(String[] args) {
 
-		String[] s = { "ab", "abc", "bd", "abcd", "abcde", "cd" };
+		String[] s = { "ab", "abc", "bd","svcbndb", "abcd", "abcde", "cd" };
 		String max_Length = s[0];
 
 		for (int i = 0; i < s.length; i++) {

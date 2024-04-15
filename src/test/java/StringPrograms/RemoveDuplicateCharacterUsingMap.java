@@ -12,15 +12,15 @@ public class RemoveDuplicateCharacterUsingMap {
 		String s = "Kannada";
 		String str = s.toLowerCase();
 		LinkedHashMap<Character,Integer> map = new LinkedHashMap<>();
-		int count=1;
+		
 		for(int i=0;i<str.length();i++)
 		{
-			map.put(str.charAt(i),count );
-			count++;
+			map.put(str.charAt(i),null );
+			
 		}
 		for (Entry<Character, Integer> a:map.entrySet()) {
 			
-			System.err.println(a.getKey()+" : "+a.getValue());
+			System.err.print(a.getKey());
 			
 		}
 	}

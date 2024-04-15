@@ -254,14 +254,14 @@ public class ArrayPrograms {
 			}
 		}
 		for (int i = 0; i < b.length; i++) {
-			System.err.print(b[i]);
+			System.err.print(b[i]+" ");
 		}
-		System.out.println();
+//		System.out.println();
 	}
 
 	@Test
-	public int appendZeroInMiddle() {
-		int a[] = { 1, 0, 5, 6, 0, 2, 0, 0 };
+	public void appendZeroInMiddle() {
+		int a[] = { 1, 0, 5, 6, 0, 2,0,0};
 		int b[] = new int[a.length];
 
 		int m = 0, n = 1;
@@ -278,7 +278,6 @@ public class ArrayPrograms {
 		for (int i = 0; i < b.length; i++) {
 			System.out.print(b[i] + " ");
 		}
-		return n;
 	}
 
 	/**
@@ -408,6 +407,25 @@ public class ArrayPrograms {
 			}
 			System.out.println();
 		}
+	}
+	@Test
+	public void reverseEachWordInAString() {
+		
+		String s="abcd efgh ijkl mnop";
+		String s1[] = s.split(" ");
+		String str = "";
+		for (int i = 0; i < s1.length; i++) {
+			String s2 = s1[i] + " ";
+			for (int j = s2.length() - 1; j >= 0; j--) {
+				str += s2.charAt(j);
+			}
+		}
+		System.out.println(str.trim());
+	}
 
+	@Test
+	public void ashdgf() {
+
+		
 	}
 }

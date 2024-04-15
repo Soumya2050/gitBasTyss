@@ -24,7 +24,7 @@ public class BrokenLinks {
 		WebDriver driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://www.amazon.in/");
-		List<WebElement> links = driver.findElements(By.xpath("//a"));
+		List<WebElement> links = driver.findElements(By.xpath("//a"));//ancor tag
 		ArrayList<Object> brokenList = new ArrayList<Object>();
 		for(int i=0;i<links.size();i++)
 		{
@@ -41,6 +41,7 @@ public class BrokenLinks {
 					brokenList.add(allLinks+"------>"+ statusCode);
 				}
 			} catch (IOException e) {}
+			
 			System.out.println(brokenList);
 			driver.quit();
 			
