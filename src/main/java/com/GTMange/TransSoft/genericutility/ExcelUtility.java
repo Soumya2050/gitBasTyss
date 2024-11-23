@@ -54,38 +54,45 @@ public class ExcelUtility {
 	 * @throws EncryptedDocumentException
 	 * @throws IOException
 	 */
-	public String getDataFromExcelBasedTestId(String path,String sheetName, String testid,String columnHeader) throws Throwable, IOException {
-		FileInputStream fin= new FileInputStream(path);
+	public String getDataFromExcelBasedTestId(String path, String sheetName, String testid, String columnHeader)
+			throws Throwable, IOException {
+		FileInputStream fin = new FileInputStream(path);
 		Workbook wb = WorkbookFactory.create(fin);
 		Sheet sheet = wb.getSheet(sheetName);
-		int rowCount=sheet.getLastRowNum();
+		int rowCount = sheet.getLastRowNum();
 		int testrowno = 0;
 		String acttestId = "";
 		String data = "";
 		for (int i = 0; i <= rowCount; i++) {
 			try {
-				 acttestId = sheet.getRow(i).getCell(0).toString();} catch (Exception e) {}
+				acttestId = sheet.getRow(i).getCell(0).toString();
+			} catch (Exception e) {
+			}
 
 			if (acttestId.equalsIgnoreCase(testid)) {
 				break;
 			}
 			testrowno++;
 		}
-		int cellCount=sheet.getRow(testrowno-1).getLastCellNum();
-		int testcolno=0;
-		for (int i = 0; i <cellCount ; i++) {
-			String actcolHeader = sheet.getRow(testrowno-1).getCell(i).toString();
+		int cellCount = sheet.getRow(testrowno - 1).getLastCellNum();
+		int testcolno = 0;
+		for (int i = 0; i < cellCount; i++) {
+			String actcolHeader = sheet.getRow(testrowno - 1).getCell(i).toString();
 			if (actcolHeader.equalsIgnoreCase(columnHeader)) {
 				break;
 			}
 			testcolno++;
 		}
-		try { data = sheet.getRow(testrowno).getCell(testcolno).toString();} catch (Exception e) {}
-		
+		try {
+			data = sheet.getRow(testrowno).getCell(testcolno).toString();
+		} catch (Exception e) {
+		}
+
 		wb.close();
 		return data;
-			
+
 	}
+
 	/**
 	 * This method is used to get the maximun used row count in required sheet
 	 * 
@@ -99,11 +106,13 @@ public class ExcelUtility {
 		FileInputStream fis = new FileInputStream(filePath);
 		Workbook wb = WorkbookFactory.create(fis);
 		Sheet sheet = wb.getSheet(sheetName);
-		int rowCount = sheet.getLastRowNum();
+		int rowCount = sheet.getLastRowNum() - 4;
 		return rowCount;
 	}
+
 	/**
 	 * This method is used to set the data into the excel
+	 * 
 	 * @param filePath
 	 * @param sheetName
 	 * @param rowNum
@@ -123,7 +132,5 @@ public class ExcelUtility {
 		wb.write(fos);
 		wb.close();
 	}
-	
-	
 
 }

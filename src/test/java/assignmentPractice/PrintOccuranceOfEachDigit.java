@@ -20,7 +20,7 @@ public class PrintOccuranceOfEachDigit {
 					count++;
 				}
 			}
-			System.out.println(integer + ": occures" + count + " times");
+			System.out.println(integer + ": occures " + count + " times");
 		}
 
 	}

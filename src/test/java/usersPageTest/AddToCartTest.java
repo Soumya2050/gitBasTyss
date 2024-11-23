@@ -1,5 +1,7 @@
 package usersPageTest;
 
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Reporter;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
@@ -60,6 +62,12 @@ public class AddToCartTest extends BaseClass2{
 		Thread.sleep(3000);
 		wLib.swithToAlertWindowAndAccpect(driver, "ok");
 		Reporter.log("The popup is handeled successfully");
+	}
+	
+	@Test
+	public void as() {
+		WebDriver driver =new ChromeDriver();
+		driver.get("www.google.com");
 	}
 
 }

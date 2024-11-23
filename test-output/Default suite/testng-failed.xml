@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="arrayPrograms.ArrayPrograms">
+      <class name="practice.readDataFromExcel">
         <methods>
-          <include name="ashdgf"/>
+          <include name="readAllDataFromExcel"/>
         </methods>
-      </class> <!-- arrayPrograms.ArrayPrograms -->
+      </class> <!-- practice.readDataFromExcel -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
