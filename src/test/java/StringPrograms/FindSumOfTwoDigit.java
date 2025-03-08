@@ -1,5 +1,7 @@
 package StringPrograms;
 
+import org.testng.annotations.Test;
+
 public class FindSumOfTwoDigit {
 		
 	public static void main(String[] args) {
@@ -20,6 +22,18 @@ public class FindSumOfTwoDigit {
 			}
 		}
 		sum=sum+temp;
+		System.out.println(sum);
+	}
+	@Test
+	public void method2() {
+		String s = "a11b12c3";
+		String []str = s.split("\\D+");
+		int sum = 0;
+		for(int i=0;i<str.length;i++) {
+			if(str[i]!=" ") {
+				
+			}
+		}
 		System.out.println(sum);
 	}
 }

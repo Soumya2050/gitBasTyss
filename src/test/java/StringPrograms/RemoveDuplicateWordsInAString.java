@@ -25,7 +25,7 @@ public class RemoveDuplicateWordsInAString {
 	}
 
 	@Test(priority = 1)
-	public void removeDuplicateWordInAString() {
+	public void removeDuplicateWordInAStringUsingMap() {
 		String s = "i am a am a software engineer engineer";
 		String[] str = s.split(" ");
 		

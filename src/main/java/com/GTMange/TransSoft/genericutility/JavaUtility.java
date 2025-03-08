@@ -54,11 +54,4 @@ public class JavaUtility {
 		return rDate;
 	}
 	
-	public void selectSpecificDateForInput(int year,String month,int date)
-	{
-		driver.findElement(By.xpath("//div[@class='DayPicker-Caption']/div[contains(text(),'"+month+"') and  contains(text(),'"+year+"') ]"));
-		
-		
-	}
-
 }

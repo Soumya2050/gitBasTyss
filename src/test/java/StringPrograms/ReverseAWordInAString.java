@@ -56,12 +56,13 @@ public class ReverseAWordInAString {
 	}
 
 	@Test
-	public void reverseEachWordInAStringmethod() {
+	public void reverseEachWordInAStringmethod() throws InterruptedException {
 		String s = "I am a Software engineer";
 		String str[] = s.split(" ");
 		for (int i = 0; i < str.length; i++) {
 			String st = str[i];
 			for (int j = st.length() - 1; j >= 0; j--) {
+				Thread.sleep(2000);
 				System.out.print(st.charAt(j));
 			}
 			System.out.print(" ");
@@ -80,6 +81,23 @@ public class ReverseAWordInAString {
 		for (int i = al.size() - 1; i >= 0; i--) {
 			Character c = (Character) al.get(i);
 			System.out.print(c);
+		}
+	}
+	
+	@Test
+	public void reverseEachWordInAString() throws InterruptedException {
+		String s="I Am A Software Engineer Worked in Gurgaon";
+		
+		String str[]=s.split(" ");
+		
+		for(int i=str.length-1;i>=0;i--) {
+			System.out.print(str[i]+" ");
+//			String str1=str[i];
+//			for(int j=0;j<str1.length();j++) {
+//				Thread.sleep(3000);
+//				System.out.print(str1.charAt(j));
+//			}
+//			System.out.print(" ");
 		}
 	}
 }
